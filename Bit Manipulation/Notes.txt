@@ -1,0 +1,74 @@
+A number in binary is just a sum of powers of 2, switched on or off.
+
+13 = 1101
+   = 1×8 + 1×4 + 0×2 + 1×1
+   = 8 + 4 + 1
+
+The operators
+
+AND (&) — "both must be on"
+
+ 1010
+&1100
+-----
+ 1000 
+
+ Truth is : 1 & 1 = 1 , Everything else is 0.
+ Keep only the bits that are 1 in both numbers
+
+
+ OR (|) — "at least one on"
+
+ 1010
+|1100
+-----
+ 1110
+
+ Gets 1 if either of them has 1 in it. 0 only if the both has 0.
+
+ XOR (^) — "exactly one on, not both" 
+
+ 1010
+^1100
+-----
+ 0110
+
+ Truth : 1^1 = 0
+ 0^0 = 0
+ 1^0 = 1
+ 0^1 = 1
+
+ Three properties for XOR : 
+
+x ^ x = 0 (a number cancels itself)
+x ^ 0 = x (identity)
+It's commutative and associative, so order doesn't matter: a^b^a = b
+
+
+NOT (~) — flips every bit. In JS (32-bit signed ints), ~x is exactly -x - 1. 
+That's not a coincidence — it comes from two's complement representation
+
+Left shift (<<) — shifts bits left, filling with 0. x << 1 is x × 2. x << n is x × 2^n.
+Analogy: sliding every digit one place to the left in decimal is ×10. Same idea, base 2.
+
+Right shift (>>) — x >> n is x ÷ 2^n (integer division), sign-preserving.
+Unsigned right shift (>>>) — same but always fills with 0, ignoring sign. 
+Useful when treating numbers as raw bit patterns rather than signed values.
+
+
+Two's complement — why negative numbers matter here
+
+Computers don't store a "minus sign" — negative numbers are represented so that addition still works normally.
+
+For an n-bit number, negative x is: ~x + 1 (flip all bits, add 1).
+
+5 = 0101
+-5 = ~0101 + 1 = 1010 + 1 = 1011
+
+
+Negation menas
+
+flip Every bit of the number provided .
+Eg : 1010 so negation of the same would be 0101
+
+
