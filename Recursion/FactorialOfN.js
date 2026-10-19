@@ -20,3 +20,6 @@ function Factorial1(n,acculmulator){
 }
 
 Factorial1(3,1)
+
+//Time complexity - O(n)
+//Space Complexity - O(n)
