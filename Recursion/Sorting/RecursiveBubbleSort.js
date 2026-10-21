@@ -1,4 +1,4 @@
-function RecursiveBubbleSort(arr,n=arr.length){
+function RecursiveBubbleSort(arr,n){
     if(n<=1){
         return arr
     }
@@ -8,7 +8,9 @@ function RecursiveBubbleSort(arr,n=arr.length){
             [arr[i],arr[i+1]] = [arr[i+1],arr[i]]
         }
     }
-    RecursiveBubbleSort(arr,n-1)
+    return RecursiveBubbleSort(arr,n-1)
 }
+let arr = [5, 3, 8, 1, 2]
+console.log(RecursiveBubbleSort(arr,arr.length));
 
-console.log(recursiveBubbleSort([5, 3, 8, 1, 2]));
+//Time complexity	O(n²)
