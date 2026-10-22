@@ -4,7 +4,7 @@ function merge(left,right){
     let j = 0
 
     while(i<left.length && j < right.length){
-        if(left[i]<right[j]){
+        if(left[i]<=right[j]){
             result.push(left[i])
             i++
         }else{
