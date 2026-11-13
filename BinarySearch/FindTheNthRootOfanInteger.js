@@ -1,0 +1,5 @@
+function NthRootOfAnInteger(){
+
+}
+
+//Notes:
